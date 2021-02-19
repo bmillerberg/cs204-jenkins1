@@ -1,4 +1,6 @@
 
+import java.util.Random;
+
 class Calculator {
 
     Calculator(){
@@ -73,7 +75,15 @@ class Calculator {
      */
     String createUniqueID(String n){
 
-        return null;
+        Random r = new Random();
+
+        String alphabet = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String returnValue = n;
+        for (int i = 0; i < 15; i++) {
+            returnValue += alphabet.charAt(r.nextInt(alphabet.length()));
+        } // prints 50 random characters from alphabet
+
+        return returnValue;
     }
 
 
