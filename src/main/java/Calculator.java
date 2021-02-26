@@ -1,4 +1,6 @@
 
+// This comment is new
+
 import java.util.Random;
 
 class Calculator {
